@@ -1,0 +1,19 @@
+{
+  "name": "kodebook",
+  "version": "0.0.0",
+  "description": "Starting to manage book",
+  "main": ".",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fmt": "prettier --write scripts/* styles/*"
+  },
+  "author": "Hung",
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "prettier": "^1.5.3"
+  },
+  "dependencies": {
+    "firebase": "^8.6.3",
+    "start": "^5.1.0"
+  }
+}

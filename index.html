@@ -1,0 +1,160 @@
+<html lang="en"><head>
+	<title>KodeBooks</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" href="assets/css/animate.min.css" type="text/css" media="all">
+<link rel="stylesheet" href="style.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%2C800%7CMontserrat%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%7CDosis%3A400%2C700&amp;ver=4.5" type="text/css" media="all">
+<link rel="stylesheet" href="icons/elegantline/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" href="assets/css/flexslider.css" type="text/css" media="all">
+	<meta charset="utf-8">
+  
+	
+	<!-- Disable tap highlight on IE -->
+	<meta name="msapplication-tap-highlight" content="no">
+	<link rel="icon" href="images/kode.png">
+  
+	<!-- Web Application Manifest -->
+	<link rel="manifest" href="manifest.json">
+  
+	
+	<!-- Tile icon for Win8 -->
+	<!-- <meta name="msapplication-TileColor" content="#3372DF">
+	<meta name="msapplication-navbutton-color" content="#303F9F"> -->
+  
+	<!-- Material Design Components -->
+	
+	<link rel="stylesheet" href="https://unpkg.com/material-components-web@0.39.3/dist/material-components-web.min.css" type="text/css">
+	<script src="https://unpkg.com/material-components-web@0.39.3/dist/material-components-web.js"></script>
+  
+	<!-- App Styling -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="/styles/main.css" type="text/css">
+	<meta property="og:title" content="The title of the sharing preview">
+  <meta property="og:description" content="The first few lines of content below the title">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/58879335">
+  
+  </head>
+  <body>
+	  	
+	
+  <script src="/__/firebase/8.6.2/firebase-app.js"></script>
+  <script src="/__/firebase/8.6.2/firebase-auth.js"></script>
+  <script src="/__/firebase/8.6.2/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  
+  <script src="//unpkg.com/navigo@6"></script>
+  <script src="/scripts/Kode.View.js"></script>
+  <script src="/scripts/Kode.Mock.js"></script>
+  <script src="/scripts/Kode.Data.js"></script>
+	<div class="page-loader" style="display: none;">
+		<img src="assets/img/loader.gif" alt="loader">
+	</div>
+	
+	<!-- Header
+	================================================== -->
+	<header id="header">
+	<div id="mega-menu" class="header header2 header-sticky primary-menu icons-no default-skin zoomIn align-right on">
+		
+	</div>
+	</header>	
+	
+	<script>
+		function isUserSignedIn() {
+  return !!firebase.auth().currentUser;
+}
+
+	function signInk() {
+		var txt;
+		var email = document.getElementById('name').value;
+		var password = document.getElementById('email').value;
+	  
+		firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
+			window.location.href = '/index1'
+	  }, function(error) {
+		location.reload();
+	  })};</script>
+	  
+	<script > firebase.auth().signOut().then(function() {
+		console.log('Signed Out', isUserSignedIn());
+	  }, function(error) {
+		console.error('Sign Out Error', error);
+	  });
+	  </script>
+	<!-- INTRO
+	================
+	================================== -->
+	<section id="home" style="padding:160px 0;background-image: url(https://unsplash.it/1324/683?random=0); background-position: center; background-repeat: no-repeat;background-size: cover;background-attachment:fixed;">
+		<div class="container">
+			<div class="textwidget">
+				<h1 class="toptitle">Quality management program for<br> USER <br><br><i style="background:#158bda" class="fa fa-star roundicon"></i>
+				</h1>								
+				<div class="contactstyle topform">										
+					<form method="post" action="contact/topcontact.php" id="topcontactform">
+						<div class="form">
+							<input type="text" id="name" placeholder="E-mail *" class="form-control">
+							<input type="text" id="email" placeholder="Password *" class="form-control">
+							
+							<input onclick="signInk()" style="background-color: #158bda; border: none; color: #222;" type="submit" id="submit" class="clearfix btn btn-primary" value="Sign in with admin">
+							<input onclick="window.location.href='/index2'" style="background-color: #158bda; border: none; color: #222;" type="submit" id="submit" class="clearfix btn btn-primary" value="Continue with user">
+ 
+						</div>
+					</form>
+					<div class="done">
+						<div class="alert alert-success">
+							<button type="button" class="close" data-dismiss="alert">×</button>
+							Your message has been sent. Thank you!
+						</div>
+					</div>
+				</div>								
+			</div>
+			</div>
+	</section>
+
+	
+	<!-- ABOUT
+	================================================== -->
+	
+	
+	<!-- TEAM
+	================================================== -->
+	
+	
+			
+	
+		
+	
+	
+	
+	
+	
+			
+
+	
+	
+	
+			
+	
+	
+	<!-- THE END OF SECTIONS -->	
+		
+	<!-- FOOTER
+	================================================== -->
+	<footer id="footer" class="footer2">
+		
+	</footer>
+	
+	<!-- SCRIPTS
+	================================================== -->
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/plugins.js"></script>
+	<script src="contact/topvalidate.js"></script>
+	<script src="contact/bottomvalidate.js"></script>
+
+   
+
+  
+  </body></html>
